@@ -1,0 +1,11 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Upload CNAB</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+  </body>
+</html>

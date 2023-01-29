@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>Lista de operações</h1>
+    <table>
+      <tr>
+        <th>Operação:</th>
+        <th>Data:</th>
+        <th>Valor:</th>
+        <th>CPF:</th>
+        <th>Cartão:</th>
+        <th>Hora:</th>
+        <th>Dono da Loja:</th>
+        <th>Nome da Loja:</th>
+      </tr>
+      {% for operacao in operacoes %}
+      <tr>
+        <td>{{ operacao.type }}</td>
+        <td>{{ operacao.date }}</td>
+        <td>{{ operacao.amount}}</td>
+        <td>{{ operacao.cpf}}</td>
+        <td>{{ operacao.card }}</td>
+        <td>{{ operacao.hour }}</td>
+        <td>{{ operacao.owner}}</td>
+        <td>{{ operacao.store}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p>Total de saldo: {{ total_saldo.amount__sum }}</p>
+  </body>
+</html>
